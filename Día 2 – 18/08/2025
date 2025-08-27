@@ -1,0 +1,3 @@
+git add src/com/mycompany/proyecto_super_ahorro/Producto.java
+
+GIT_COMMITTER_DATE="2025-08-18 10:00:00" git commit -m "Crear clase Producto con atributos básicos" --date "2025-08-18 10:00:00"
