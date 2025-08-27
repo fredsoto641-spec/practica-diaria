@@ -1,3 +1,1 @@
-git add src/com/mycompany/proyecto_super_ahorro/Venta.java
-
-GIT_COMMITTER_DATE="2025-08-21 10:00:00" git commit -m "Crear clase Venta y clase interna ItemVenta" --date "2025-08-21 10:00:00"
+Se creo clase Venta y clase interna ItemVenta
