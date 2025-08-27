@@ -1,3 +1,17 @@
-git add src/com/mycompany/proyecto_super_ahorro/Inventario.java
+Se implemento clase Inventario con gestión de productos
+package com.mycompany.proyecto_super_ahorro;
+import java.util.ArrayList;
+import java.util.List;
 
-GIT_COMMITTER_DATE="2025-08-20 10:00:00" git commit -m "Implementar clase Inventario con gestión de productos" --date "2025-08-20 10:00:00"
+public class Inventario {
+    private List<Producto> productos = new ArrayList<>();
+
+    public void agregarProducto(Producto p) { productos.add(p); }
+    public void eliminarProducto(Producto p) { productos.remove(p); }
+
+    public void listarProductos() {
+        for (Producto p : productos) {
+            System.out.println(p.getNombre() + " - Stock: " + p.getStock());
+        }
+    }
+}
