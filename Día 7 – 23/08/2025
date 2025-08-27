@@ -1,3 +1,14 @@
-git add src/com/mycompany/proyecto_super_ahorro/Tienda.java
+Se integro clase Tienda con inventario, proveedores y ventas
+package com.mycompany.proyecto_super_ahorro;
+import java.util.ArrayList;
+import java.util.List;
 
-GIT_COMMITTER_DATE="2025-08-23 10:00:00" git commit -m "Integrar clase Tienda con inventario, proveedores y ventas" --date "2025-08-23 10:00:00"
+public class Tienda {
+    private Inventario inventario = new Inventario();
+    private List<Proveedor> proveedores = new ArrayList<>();
+    private List<Venta> ventas = new ArrayList<>();
+
+    public void registrarProveedor(Proveedor p) { proveedores.add(p); }
+    public void agregarProducto(Producto p) { inventario.agregarProducto(p); }
+    public void registrarVenta(Venta v) { ventas.add(v); }
+}
