@@ -1,4 +1,15 @@
-git add src/com/mycompany/proyecto_super_ahorro/Proveedor.java
+Se añadio clase Proveedor y relación con Producto
+package com.mycompany.proyecto_super_ahorro;
 
-GIT_COMMITTER_DATE="2025-08-19 10:00:00" git commit -m "Añadir clase Proveedor y relación con Producto" --date "2025-08-19 10:00:00"
+public class Proveedor {
+    private String nombre;
+    private String contacto;
 
+    public Proveedor(String nombre, String contacto) {
+        this.nombre = nombre;
+        this.contacto = contacto;
+    }
+
+    public String getNombre() { return nombre; }
+    public String getContacto() { return contacto; }
+}
