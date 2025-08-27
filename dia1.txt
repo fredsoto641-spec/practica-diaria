@@ -1,1 +1,1 @@
-Hoy empecé mi práctica de commits diarios en GitHub.
+Inicializar repositorio con estructura del proyecto
