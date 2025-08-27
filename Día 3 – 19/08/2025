@@ -1,0 +1,4 @@
+git add src/com/mycompany/proyecto_super_ahorro/Proveedor.java
+
+GIT_COMMITTER_DATE="2025-08-19 10:00:00" git commit -m "Añadir clase Proveedor y relación con Producto" --date "2025-08-19 10:00:00"
+
