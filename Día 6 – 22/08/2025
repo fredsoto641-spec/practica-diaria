@@ -1,3 +1,11 @@
-git add src/com/mycompany/proyecto_super_ahorro/ColaPedidos.java src/com/mycompany/proyecto_super_ahorro/PilaVentas.java
+Se implemento ColaPedidos y PilaVentas
+// ColaPedidos.java
+package com.mycompany.proyecto_super_ahorro;
+import java.util.LinkedList;
+import java.util.Queue;
 
-GIT_COMMITTER_DATE="2025-08-22 10:00:00" git commit -m "Implementar ColaPedidos y PilaVentas" --date "2025-08-22 10:00:00"
+public class ColaPedidos {
+    private Queue<String> pedidos = new LinkedList<>();
+    public void agregarPedido(String pedido) { pedidos.add(pedido); }
+    public String procesarPedido() { return pedidos.poll(); }
+}
