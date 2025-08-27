@@ -1,5 +1,8 @@
-git init
-
-git add pom.xml build.xml manifest.mf
-
-GIT_COMMITTER_DATE="2025-08-17 10:00:00" git commit -m "Inicializar repositorio con estructura del proyecto" --date "2025-08-17 10:00:00"
+se agregan archivos de configuración (pom.xml, build.xml, manifest.mf) y carpeta src/.
+<!-- pom.xml -->
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mycompany</groupId>
+  <artifactId>proyecto_super_ahorro</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</project>
