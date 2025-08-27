@@ -1,0 +1,5 @@
+git init
+
+git add pom.xml build.xml manifest.mf
+
+GIT_COMMITTER_DATE="2025-08-17 10:00:00" git commit -m "Inicializar repositorio con estructura del proyecto" --date "2025-08-17 10:00:00"
