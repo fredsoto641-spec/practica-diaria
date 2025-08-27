@@ -1,3 +1,15 @@
-git add src/GestionProductos.java
+Se añadio clase GestionProductos para control general
+package com.mycompany.proyecto_super_ahorro;
 
-GIT_COMMITTER_DATE="2025-08-25 10:00:00" git commit -m "Añadir clase GestionProductos para control general" --date "2025-08-25 10:00:00"
+public class GestionProductos {
+    private Tienda tienda = new Tienda();
+
+    public void demo() {
+        Producto p1 = new Producto("Arroz", 3.5, 50);
+        Producto p2 = new Producto("Leche", 4.0, 30);
+        tienda.agregarProducto(p1);
+        tienda.agregarProducto(p2);
+
+        tienda.inventario.listarProductos();
+    }
+}
