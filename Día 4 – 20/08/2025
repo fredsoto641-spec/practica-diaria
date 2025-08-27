@@ -1,0 +1,3 @@
+git add src/com/mycompany/proyecto_super_ahorro/Inventario.java
+
+GIT_COMMITTER_DATE="2025-08-20 10:00:00" git commit -m "Implementar clase Inventario con gestión de productos" --date "2025-08-20 10:00:00"
