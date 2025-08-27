@@ -1,0 +1,4 @@
+git add src/com/mycompany/proyecto_super_ahorro/Main.java
+
+GIT_COMMITTER_DATE="2025-08-24 10:00:00" git commit -m "Crear clase Main con menú en consola" --date "2025-08-24 10:00:00"
+
