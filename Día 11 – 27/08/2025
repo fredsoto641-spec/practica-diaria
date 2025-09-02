@@ -1,0 +1,2 @@
+Mejorar Inventario: validación para evitar productos duplicados.
+(Actualizar Inventario.java: cuando se agrega un producto, comprobar si ya existe el nombre).
