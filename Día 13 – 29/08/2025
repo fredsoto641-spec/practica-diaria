@@ -1,0 +1,5 @@
+Manejo de excepciones al vender productos (stock insuficiente).
+
+if (producto.getStock() < cantidad) {
+    throw new IllegalArgumentException("Stock insuficiente");
+}
