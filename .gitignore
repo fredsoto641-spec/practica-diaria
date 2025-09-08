@@ -1,0 +1,48 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.log
+hs_err_pid*
+*.javadoc
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Eclipse
+*.launch
+.settings/
+bin/
+tmp/
+*.bak
+*.swp
+
+# VS Code
+.vscode/
+.history/
+
+# IntelliJ IDEA
+*.iml
+.idea/
+out/
+
+# Others
+.DS_Store
+Thumbs.db
