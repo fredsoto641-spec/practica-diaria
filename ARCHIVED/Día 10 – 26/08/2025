@@ -1,6 +1,0 @@
-Añadir opción para eliminar productos desde GestionProductos.
-
-public void eliminarDemo() {
-    tienda.eliminarProducto("Arroz");
-    tienda.inventario.listarProductos();
-}

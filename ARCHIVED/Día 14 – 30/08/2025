@@ -1,2 +1,0 @@
-Refactorización: mover la lógica de impresión fuera de Inventario a una clase VistaConsola.
-(Separa responsabilidades: modelo y vista).

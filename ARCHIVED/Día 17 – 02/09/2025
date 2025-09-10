@@ -1,5 +1,0 @@
-Actualizar README con instrucciones de compilación y ejecución.
-Ejemplo:
-
-javac -d bin src/com/mycompany/proyecto_super_ahorro/*.java
-java -cp bin com.mycompany.proyecto_super_ahorro.Main
