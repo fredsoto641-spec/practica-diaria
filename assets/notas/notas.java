@@ -1,0 +1,1 @@
+//Se quiere implemento un registro exitoso en la pagina web mediante un host de xampp
