@@ -3,3 +3,5 @@
 //Se creo una base de datos guia_turistica mediante xampp
 //Se creo una base con guia_turistica
 //La pagina responde correctamente al usuario admin
+//Se quiere implementar un metodo cookies para que se guarde el inicio sesion y se vea reflejado
+//Se modifico la base de datos
