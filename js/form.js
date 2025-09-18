@@ -1,40 +1,54 @@
-// Alternar entre formularios
-document.addEventListener('DOMContentLoaded', function () {
-    const loginForm = document.querySelector('.login');
-    const registerForm = document.querySelector('.registro');
-    const loginLink = document.getElementById('login-enlace');
-    const registerLink = document.getElementById('registrar-enlace');
 
-    //Alternar a formulario a registro
-    registerLink.addEventListener('click', function (e) {
-        e.preventDefault();
-        loginForm.classList.remove('active');
-        registerForm.classList.add('active');
+// Validación mejorada de formularios
+document.addEventListener("DOMContentLoaded", () => {
+    const forms = document.querySelectorAll("form");
+    forms.forEach(form => {
+        form.addEventListener("submit", (e) => {
+            let valid = true;
+            const inputs = form.querySelectorAll("input[required], textarea[required]");
+            inputs.forEach(input => {
+                const errorMsg = input.nextElementSibling;
+                if (input.value.trim() === "") {
+                    valid = false;
+                    if (!errorMsg || !errorMsg.classList.contains("error-message")) {
+                        const span = document.createElement("span");
+                        span.classList.add("error-message");
+                        span.style.color = "red";
+                        span.textContent = "Este campo es obligatorio";
+                        input.insertAdjacentElement("afterend", span);
+                    }
+                } else {
+                    if (errorMsg && errorMsg.classList.contains("error-message")) {
+                        errorMsg.remove();
+                    }
+                }
+                // Validar email
+                if (input.type === "email") {
+                    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!regex.test(input.value)) {
+                        valid = false;
+                        if (!errorMsg || !errorMsg.classList.contains("error-message")) {
+                            const span = document.createElement("span");
+                            span.classList.add("error-message");
+                            span.style.color = "red";
+                            span.textContent = "Ingrese un correo válido";
+                            input.insertAdjacentElement("afterend", span);
+                        }
+                    }
+                }
+                // Validar contraseña mínima de 6 caracteres
+                if (input.type === "password" && input.value.length < 6) {
+                    valid = false;
+                    if (!errorMsg || !errorMsg.classList.contains("error-message")) {
+                        const span = document.createElement("span");
+                        span.classList.add("error-message");
+                        span.style.color = "red";
+                        span.textContent = "La contraseña debe tener al menos 6 caracteres";
+                        input.insertAdjacentElement("afterend", span);
+                    }
+                }
+            });
+            if (!valid) e.preventDefault();
+        });
     });
-
-    //Alternar a formulario de inicio de sesion
-    loginLink.addEventListener('click', function (e) {
-        e.preventDefault();
-        registerForm.classList.remove('active');
-        loginForm.classList.add('active');
-    });
-
-    // Mostrar login por defecto
-    loginForm.classList.add('active');
-});
-
-// Añade feedback visul a tiempo real
-const passwordInput = document.getElementById('contrasena_registro');
-const confirmPasswordInput = document.getElementById('repetir_contrasena');
-const message = document.getElementById('password-message');
-
-// Escucha eventos de entrada en el campo de confirmación de contraseña
-confirmPasswordInput.addEventListener('input', function () {
-    if (passwordInput.value !== confirmPasswordInput.value) {
-        message.textContent = 'Las contraseñas no coinciden';
-        message.style.color = 'red';
-    } else {
-        message.textContent = 'Las contraseñas coinciden';
-        message.style.color = 'green';
-    }
 });
