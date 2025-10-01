@@ -10,3 +10,4 @@
 //El trabajo colaborativo con sistemas de control de versiones en la nube significa usar plataformas como GitHub para que varios usuarios trabajen juntos en un mismo proyecto, de forma organizada, segura y sin perder el historial de cambios.
 //Se planea añadir mas 
 //Se corrigio el login
+//Se quiere añadir un metodo cookie para que se refleje el inicio de sesion
