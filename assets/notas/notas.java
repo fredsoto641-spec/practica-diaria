@@ -12,3 +12,4 @@
 //Se corrigio el login
 //Se quiere añadir un metodo cookie para que se refleje el inicio de sesion
 //Herramientas de desarrollo para paginas web
+//update responsive
