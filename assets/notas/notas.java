@@ -15,3 +15,4 @@
 //update responsive
 //fix iniciarsesion
 //update proyecto
+//fix playas
