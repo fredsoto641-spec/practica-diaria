@@ -16,3 +16,4 @@
 //fix iniciarsesion
 //update proyecto
 //fix playas
+//fix contacto
