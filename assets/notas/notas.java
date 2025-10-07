@@ -17,3 +17,4 @@
 //update proyecto
 //fix playas
 //fix contacto
+//add cookie
