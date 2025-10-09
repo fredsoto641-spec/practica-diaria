@@ -18,3 +18,4 @@
 //fix playas
 //fix contacto
 //add cookie
+//add metodo login
