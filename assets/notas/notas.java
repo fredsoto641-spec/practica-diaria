@@ -20,3 +20,4 @@
 //add cookie
 //add metodo login
 //add inicio index
+//fix audio
