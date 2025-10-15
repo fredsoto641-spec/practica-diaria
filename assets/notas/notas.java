@@ -21,3 +21,4 @@
 //add metodo login
 //add inicio index
 //fix audio
+//fix video
