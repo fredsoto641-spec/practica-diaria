@@ -22,3 +22,4 @@
 //add inicio index
 //fix audio
 //fix video
+//fix webp
