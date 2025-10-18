@@ -23,3 +23,4 @@
 //fix audio
 //fix video
 //fix webp
+//fix avif
