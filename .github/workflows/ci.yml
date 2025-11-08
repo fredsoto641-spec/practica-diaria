@@ -1,4 +1,4 @@
-name: Java CI
+name: PHP CI
 
 on:
   push:
@@ -11,14 +11,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Descargar tu código
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Java
-        uses: actions/setup-java@v3
+      # 2️⃣ Instalar PHP
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
         with:
-          java-version: '17'
-          distribution: 'temurin'
+          php-version: '8.2'
+          extensions: mbstring, intl, dom, pdo, pdo_mysql
+          coverage: none
 
-      - name: Build with Maven
-        run: mvn clean install
+      # 3️⃣ Instalar dependencias (si usas Composer)
+      - name: Install dependencies
+        run: |
+          if [ -f composer.json ]; then
+            composer install --no-progress --no-interaction
+          else
+            echo "No composer.json found, skipping composer install"
+          fi
+
+      # 4️⃣ Ejecutar pruebas si existen
+      - name: Run PHPUnit tests
+        run: |
+          if [ -f vendor/bin/phpunit ]; then
+            vendor/bin/phpunit
+          else
+            echo "No PHPUnit tests found"
+          fi
+
+      # 5️⃣ Verificar sintaxis PHP
+      - name: PHP Syntax Check
+        run: |
+          find . -type f -name "*.php" -print0 | xargs -0 -n1 php -l
