@@ -1,1 +1,2 @@
 se añadio integracion continua github actions para automatizar la revision y prueba del proyecto PHP<
+se planea agregar otra herramienta
