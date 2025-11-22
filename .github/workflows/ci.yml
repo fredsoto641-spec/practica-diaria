@@ -45,3 +45,9 @@ jobs:
       - name: PHP Syntax Check
         run: |
           find . -type f -name "*.php" -print0 | xargs -0 -n1 php -l
+      # 6️⃣ Subir artefacto listo para despliegue
+      - name: Upload build as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: php-build
+          path: .
