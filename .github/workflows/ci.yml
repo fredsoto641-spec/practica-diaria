@@ -72,13 +72,14 @@ jobs:
 
       # Desplegar por FTP
       - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: .
-          server-dir: /public_html/
+  uses: SamKirkland/FTP-Deploy-Action@v4
+  with:
+    server: ${{ secrets.FTP_SERVER }}
+    username: ${{ secrets.FTP_USER }}
+    password: ${{ secrets.FTP_PASSWORD }}
+    local-dir: .
+    server-dir: /public_html/
+
           exclude: |
             **/.git*
             **/.github*
