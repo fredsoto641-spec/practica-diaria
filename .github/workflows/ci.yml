@@ -1,4 +1,4 @@
-name: PHP CI
+name: PHP CI/CD
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
 
 jobs:
   build:
+    name: CI - Build & Test
     runs-on: ubuntu-latest
 
     steps:
@@ -52,3 +53,36 @@ jobs:
         with:
           name: php-build
           path: .
+
+  deploy:
+    name: CD - Deploy to FTP
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'   # Solo desplegar en main
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Descargar artefacto generado por CI
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: php-build
+
+      # Desplegar por FTP
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: .
+          server-dir: /public_html/
+          exclude: |
+            **/.git*
+            **/.github*
+            **/tests*
+            composer.json
+            composer.lock
+
