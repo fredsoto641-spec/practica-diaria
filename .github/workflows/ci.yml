@@ -8,6 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
+
   build:
     name: CI - Build & Test
     runs-on: ubuntu-latest
@@ -49,7 +50,7 @@ jobs:
           name: php-build
           path: .
 
-    deploy:
+  deploy:
     name: CD - Deploy to FTP
     needs: build
     runs-on: ubuntu-latest
